@@ -77,10 +77,10 @@ int main() {
 
 
     //I mushed parts 4 and 5 together but below will be the output for question 5
-    cout << "Cost of supplying energy for one second at $0.10/kWh =$" << cost1 << endl;
-    cout << "Cost of supplying energy for one hour at $0.10/kWh =$" << cost2 << endl;
-    cout << "Cost of supplying energy for one day at $0.10/kWh =$" << cost3 << endl;
-    cout << "Cost of supplying energy for one year at $0.10/kWh =$" << cost4 << endl;
+    cout << "Cost of supplying energy for one second at $0.10/kWh = $" << cost1 << endl;
+    cout << "Cost of supplying energy for one hour at $0.10/kWh = $" << cost2 << endl;
+    cout << "Cost of supplying energy for one day at $0.10/kWh = $" << cost3 << endl;
+    cout << "Cost of supplying energy for one year at $0.10/kWh = $" << cost4 << endl;
 
 
     return 0;
