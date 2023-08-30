@@ -6,7 +6,7 @@ using namespace std;
 int main() {
     //Step One
     //Declared a string and sent it to ouput.
-    string myOutput = "ECE 0301 DC Resistice Circuit Simulation\nModeled after www.falstad.com/circuit/\nCircuits -> Basics -> Ohm's Law";
+    string myOutput = "ECE 0301 DC Resistive Circuit Simulation\nModeled after www.falstad.com/circuit/\nCircuits -> Basics -> Ohm's Law";
     cout << myOutput <<endl;
 
     //--------------------------------------------------
