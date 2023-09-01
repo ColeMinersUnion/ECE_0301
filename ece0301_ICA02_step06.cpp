@@ -19,13 +19,13 @@ int main() {
     cout << "\nEnter P1 Truth Value: ";
     cin >> P1_Truth;                    //1s and 0s are truthy/falsy values so when I'm assigning them to boolean values they should 
                                         //convert to their respective boolean type on assignment.
-    cout << "\tEnter P2 Truth Value: ";
+    cout << "Enter P2 Truth Value: ";
     cin >> P2_Truth;                    //One question I had was that when I was testing, aren't all non-zero integers considered a truthy value?
                                         //Why does it throw a runtime error with 
-    cout << "\tEnter P3 Truth Value: ";
+    cout << "Enter P3 Truth Value: ";
     cin >> P3_Truth;
 
-    cout << boolalpha << "You entered: P1 = " << P1_Truth << ", P2 = " << P2_Truth << ", P3 = " << P3_Truth << "." << endl;
+    cout << boolalpha << "\nYou entered: P1 = " << P1_Truth << ", P2 = " << P2_Truth << ", P3 = " << P3_Truth << "." << endl;
     //Used the boolalpha flag to convert boolean values to True and False in the output terminal.
 
     //Creating my truth Table
