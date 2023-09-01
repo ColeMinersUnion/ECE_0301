@@ -11,7 +11,7 @@ int main() {
     string P2 = "Earth is flat.";       //My Three Proposition variables
     string P3 = "The moon is cheese.";
 
-    cout << "P1: " << P1 << endl << "P2: " << P2 << endl << "P3:" << P3 << endl; //Printing my propositions. End of step 2
+    cout << "P1: " << P1 << endl << "P2: " << P2 << endl << "P3: " << P3 << endl; //Printing my propositions. End of step 2
 
     //----------------------------------------------------------------------------------------
     bool P1_Truth, P2_Truth, P3_Truth;
