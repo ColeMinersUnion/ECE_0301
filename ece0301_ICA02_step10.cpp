@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
 
-    cout << "ECE Propositional Logic Example\n" << endl; //Step 1.
+    cout << "ECE 0301 Propositional Logic Example\n" << endl; //Step 1.
 
     string P1 = "Pigs can fly";
     string P2 = "Earth is flat.";       //My Three Proposition variables
