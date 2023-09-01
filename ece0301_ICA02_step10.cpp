@@ -53,7 +53,7 @@ int main() {
     cout << "P6\t\t" << P6_Truth << endl;
     cout << "P7\t\t" << P7_Truth << endl;
     cout << "P8\t\t" << P8_Truth << endl;
-    cout << "P8\t\t" << P9_Truth << endl;
+    cout << "P9\t\t" << P9_Truth << endl;
 
 
     return 0;
