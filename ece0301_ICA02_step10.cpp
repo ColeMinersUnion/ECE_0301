@@ -7,9 +7,9 @@ int main() {
 
     cout << "ECE 0301 Propositional Logic Example\n" << endl; //Step 1.
 
-    string P1 = "Pigs can fly";
+    string P1 = "Pigs can fly.";
     string P2 = "Earth is flat.";       //My Three Proposition variables
-    string P3 = "The moon is cheese";
+    string P3 = "The moon is cheese.";
 
     cout << "P1: " << P1 << endl << "P2: " << P2 << endl << "P3:" << P3 << endl; //Printing my propositions. End of step 2
 
