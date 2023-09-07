@@ -35,8 +35,8 @@ int main() {
 
 
     //determining my coumpound value (I think i'm just doing 1 & 2 & 3)
-    bool P4_Truth = P1_Truth && P2_Truth && P3_Truth;
-    bool P5_Truth = P1_Truth || P2_Truth || P3_Truth;
+    bool P4_Truth = P1_Truth && !P2_Truth && P3_Truth;
+    bool P5_Truth = !P1_Truth || P2_Truth || P3_Truth;
 
     //Why does boolaplha still work? It should be out of the scope. If i'm calling it within the previous cout object
     //why does it still affect the below object.
