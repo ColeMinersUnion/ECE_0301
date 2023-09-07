@@ -35,8 +35,8 @@ int main() {
 
 
     //determining my coumpound value (I think i'm just doing 1 & 2 & 3)
-    bool P4_Truth = P1_Truth && P2_Truth && P3_Truth;
-    bool P5_Truth = P1_Truth || P2_Truth || P3_Truth;
+    bool P4_Truth = P1_Truth && !P2_Truth && P3_Truth;
+    bool P5_Truth = !P1_Truth || P2_Truth || P3_Truth;
     bool P6_Truth = 1 == P1_Truth + P2_Truth + P3_Truth;
     bool P7_Truth = !P1_Truth && !P2_Truth && !P3_Truth;
     bool P8_Truth = 1 < P1_Truth + P2_Truth + P3_Truth;
