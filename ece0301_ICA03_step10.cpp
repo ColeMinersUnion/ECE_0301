@@ -215,7 +215,7 @@ int main() {
                 } else {
                     if(nChosen){
                         cout << "Difference, Cartesian:\tv_diff = (" << a - g << ", " << b - h << ")\n";
-                        cout << "Difference, Polar\v_diff = (" << c - e << ", " << d - f << ")\n";
+                        cout << "Difference, Polar\tv_diff = (" << c - e << ", " << d - f << ")\n";
                     } else {
                         cout << "Difference, Cartesian:\tv_diff = (" << a - e << ", " << b - f << ")\n";
                         cout << "Difference, Polar\tv_diff = (" << c - g << ", " << d - h << ")\n";
@@ -268,16 +268,85 @@ int main() {
         }
     } else {
         cout << "Which of the following vector sums or differences would you like to complete?" << endl;
-        cout << "(1) v1 + v2\n(2) v1 - v2\n(3) v2 - v1\n(4) -v1 - v2\n" << endl;
+        cout << "(1) z1 + z2\n(2) z1 - z2\n(3) z2 - z1\n(4) -z1 - z2\n" << endl;
         cin >> num;
         switch(num){
             case 1:
+                if (notChosen){
+                    if(nChosen){
+                        cout << "Sum, Cartesian:\tz_sum = " << c + g << " + j " << d + h << "\n";
+                        cout << "Sum, Polar\tz_sum = " << a + e << " exp(j " << b + f << ")\n";
+                    } else {
+                        cout << "Sum, Cartesian:\tz_sum = " << c + e << " + j " << d + f << "\n";
+                        cout << "Sum, Polar\tz_sum = " << a + g << " exp(j " << b + h << ")\n";
+                    }
+                } else {
+                    if(nChosen){
+                        cout << "Sum, Cartesian:\tz_sum = " << a + g << " + j " << b + h << "\n";
+                        cout << "Sum, Polar\tz_sum = " << c + e << " exp(j " << d + f << ")\n";
+                    } else {
+                        cout << "Sum, Cartesian:\tz_sum = " << a + e << " + j " << b + f << "\n";
+                        cout << "Sum, Polar\tz_sum = (" << c + g << " exp(j " << d + h << ")\n";
+                    }
+                }
                 break;
             case 2:
+                if (notChosen){
+                    if(nChosen){
+                        cout << "Difference, Cartesian:\tz_difference = " << c - g << " + j " << d - h << "\n";
+                        cout << "Difference, Polar\tz_difference = " << a - e << " exp(j " << b - f << ")\n";
+                    } else {
+                        cout << "Sum, Cartesian:\tz_sum = (" << c - e << " + j " << d - f << "\n";
+                        cout << "Sum, Polar\tz_sum = (" << a - g << " exp(j " << b - h << ")\n";
+                    }
+                } else {
+                    if(nChosen){
+                        cout << "Difference, Cartesian:\tz_diff = " << a - g << " + j " << b - h << "\n";
+                        cout << "Difference, Polar\tz_diff = " << c - e << " exp(j " << d - f << ")\n";
+                    } else {
+                        cout << "Difference, Cartesian:\tz_diff = " << a - e << " + j " << b - f << "\n";
+                        cout << "Difference, Polar\tz_diff = " << c - g << " exp(j " << d - h << ")\n";
+                    }
+                }
+
                 break;
             case 3:
+                if (notChosen){
+                    if(nChosen){
+                        cout << "Difference, Cartesian:\tz_difference = " << g - c << " + j " << h - d << "\n";
+                        cout << "Difference, Polar\tz_difference = " << e - a << " exp(j  " << f - b << ")\n";
+                    } else {
+                        cout << "Sum, Cartesian:\tv_sum = " << e - c << " + j " << f - d << "\n";
+                        cout << "Sum, Polar\tv_sum = " << g - a << " exp(j " << h - b << ")\n";
+                    }
+                } else {
+                    if(nChosen){
+                        cout << "Difference, Cartesian:\tz_diff = " << g - a << " + j " << h - b << "\n";
+                        cout << "Difference, Polar\tz_diff = " << e - c << " exp(j " << f - d << ")\n";
+                    } else {
+                        cout << "Difference, Cartesian:\tz_diff = " << e - a << " + j " <<f - b << "\n";
+                        cout << "Difference, Polar\tz_diff = " << g - c << "exp(j " << h - d << ")\n";
+                    }
+                }
                 break; 
             case 4:
+                if (notChosen){
+                    if(nChosen){
+                        cout << "Sum, Cartesian:\tz_sum = " << -1*(c + g) << " + j " << -1*(d + h) << "\n";
+                        cout << "Sum, Polar\tz_sum = " << -1*(a + e)<< " exp(j  " << -1*(b + f) << ")\n";
+                    } else {
+                        cout << "Sum, Cartesian:\tz_sum = " << -1* (c + e) << " + j " << -1*(d + f) << "\n";
+                        cout << "Sum, Polar\tz_sum = " << -1*(a + g) << " exp(j " << -1*(b + h) << ")\n";
+                    }
+                } else {
+                    if(nChosen){
+                        cout << "Sum, Cartesian:\tz_sum = " << -1*(a + g) << " + j " << -1*(b + h) << "\n";
+                        cout << "Sum, Polar\tz_sum = " << -1*(c + e) << " exp(j " << -1*(d + f) << ")\n";
+                    } else {
+                        cout << "Sum, Cartesian:\tz_sum = " << -1 * (a + e )<< " + j " <<  -1 * (b + f )<< "\n";
+                        cout << "Sum, Polar\tz_sum = " << -1 * (c + g) << " exp(j  " << -1 * (d + h) << ")\n";
+                    }
+                }
                 break;
             default:
                 cout << "\nERROR! Invalid selection, exiting.";
