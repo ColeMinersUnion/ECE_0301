@@ -125,7 +125,7 @@ int main() {
 
     //Step 8
 
-    cout << "Do the values you entered represent vectors (v) or complex numbers (c)?\nPlease enter a single character to represent your choice.\n";
+    cout << "\nDo the values you entered represent vectors (v) or complex numbers (c)?\nPlease enter a single character to represent your choice.\n";
     cin >> input;
 
     bool noChosen;
@@ -351,6 +351,6 @@ int main() {
             default:
                 cout << "\nERROR! Invalid selection, exiting.";
                 return -1;
+        }
     }
-
 }
