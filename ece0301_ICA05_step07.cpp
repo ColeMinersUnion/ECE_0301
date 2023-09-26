@@ -86,7 +86,7 @@ bool And(bool x, bool y, bool z, bool x1 = true, bool y1 = true, bool z1 = true)
 
 void OrTruthTable(ofstream &output, bool x1, bool y1, bool z1, int index){
     output << "\nTruth table for M" << index << ".\n\n";
-    output << "X\tY\tZ\tf(z, y, z)\n";
+    output << "x\ty\tz\tf(x,y,z)\n";
     for(int i = 0; i < 32; i++){
         output << "-";
     }
@@ -105,7 +105,7 @@ void OrTruthTable(ofstream &output, bool x1, bool y1, bool z1, int index){
 
 void AndTruthTable(ofstream &output, bool x1, bool y1, bool z1, int index){
     output << "\nTruth table for minterm " << index << ".\n\n";
-    output << "X\tY\tZ\tf(z, y, z)\n";
+    output << "x\ty\tz\tf(x,y,z)\n";
     for(int i = 0; i < 32; i++){
         output << "-";
     }
