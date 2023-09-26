@@ -35,7 +35,7 @@ int main(){
     string myStr = minterm(num, output);
     string maxtm = maxterm(num, output);
 
-    //output << "ECE 0301: Boolean Function of 3 Variables.\nRealization in Canonical Forms.\n" << endl;
+    output << "ECE 0301: Boolean Function of 3 Variables.\nRealization in Canonical Forms.\n" << endl;
 
 
     if (myStr == "ERROR! Invalid minterm index.\n"){ 
@@ -150,7 +150,6 @@ string minterm(int index, ofstream &output){
         z = !z;
     } else { m += "z";}
 
-    output << "ECE 0301: Boolean Function of 3 Variables.\nRealization in Canonical Forms.\n" << endl;
 
     output << "\nm" << index << " = " << m << endl;
 
@@ -185,7 +184,6 @@ string maxterm(int index, ofstream &output){
         m += "z";
         z = !z;
     } else { m += "z'";};
-    output << "ECE 0301: Boolean Function of 3 Variables.\nRealization in Canonical Forms.\n" << endl;
 
     output << "\nM" << index << " = " << m << endl;
 
