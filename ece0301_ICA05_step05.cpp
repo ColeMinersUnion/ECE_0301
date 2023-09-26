@@ -37,7 +37,7 @@ int main(){
         return 0;
     }
     if (maxtm == "ERROR! Invalid maxterm index.\n"){ 
-        output << myStr << endl;
+        output << maxtm << endl;
         return 0;
     }
     
@@ -137,21 +137,21 @@ string maxterm(int index){
     //I probably could have converted the index into bits and parsed over it like a string but oh well
     switch (index){
         case 0:
-            return "x+y+z";
+            return "x + y + z";
         case 1:
-            return "x+y+z'";
+            return "x + y + z'";
         case 2:
-            return "x+y'+z";
+            return "x + y' + z";
         case 3:
-            return "x+y'+z'";
+            return "x + y' + z'";
         case 4:
-            return "x'+y+z";
+            return "x' + y + z";
         case 5:
-            return "x'+y+z'";
+            return "x' + y + z'";
         case 6:
-            return "x'+y'+z";
+            return "x' + y' + z";
         case 7:
-            return "x'+y'+z'";
+            return "x' + y' + z'";
         default:
             return "ERROR! Invalid minterm index.\n";
         
