@@ -70,7 +70,7 @@ bool And(bool x, bool y, bool z){
 
 void OrTruthTable(ofstream &output){
     output << "\nTruth table for OR gate.\n\n";
-    output << "X\tY\tZ\tf(z, y, z)\n";
+    output << "x\ty\tz\tf(x,y,z)\n";
     for(int i = 0; i < 32; i++){
         output << "-";
     }
@@ -89,7 +89,7 @@ void OrTruthTable(ofstream &output){
 
 void AndTruthTable(ofstream &output){
     output << "\nTruth table for AND gate.\n\n";
-    output << "X\tY\tZ\tf(z, y, z)\n";
+    output << "x\ty\tz\tf(x,y,z)\n";
     for(int i = 0; i < 32; i++){
         output << "-";
     }
