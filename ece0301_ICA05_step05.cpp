@@ -45,8 +45,8 @@ int main(){
     output << "M" << num << " = " << maxtm << endl;
     
 
-    OrTruthTable(output);
-    AndTruthTable(output);
+    //OrTruthTable(output);
+    //AndTruthTable(output);
     output.close();
 
     return 0;
