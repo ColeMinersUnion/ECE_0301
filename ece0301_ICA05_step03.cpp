@@ -5,6 +5,9 @@ using namespace std;
 bool Or(bool, bool, bool); //I used a simple name because I think I'll have to overload it later
 void OrTruthTable(ofstream &);
 
+bool And(bool, bool, bool);
+void AndTruthTable(ofstream &);
+
 int main(){
     string addr = "Bool_func_3var_CSOP_CPOS.txt";
     ofstream output;
