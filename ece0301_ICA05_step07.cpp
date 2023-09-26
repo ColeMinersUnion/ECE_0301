@@ -31,11 +31,13 @@ int main(){
     ofstream output;
     output.open(addr);
 
+    output << "ECE 0301: Boolean Function of 3 Variables.\nRealization in Canonical Forms.\n" << endl;
+
+
 
     string myStr = minterm(num, output);
     string maxtm = maxterm(num, output);
 
-    output << "ECE 0301: Boolean Function of 3 Variables.\nRealization in Canonical Forms.\n" << endl;
 
 
     if (myStr == "ERROR! Invalid minterm index.\n"){ 
