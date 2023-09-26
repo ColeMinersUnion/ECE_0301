@@ -35,7 +35,7 @@ int main(){
     output.open(addr);
 
     output << "ECE 0301: Boolean Function of 3 Variables.\nRealization in Canonical Forms.\n" << endl;
-    bool x = true, y = true, z = true;
+    bool x = false, y = false, z = false;
     string myStr = CSOP(num, output);
     bool myBool = CSOP(num, output, x, y, z);
     if (myStr == "ERROR! Invalid minterm index.\n"){ 
