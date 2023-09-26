@@ -118,42 +118,42 @@ string CSOP(int index, ofstream &output){
 
 
     if(index > 127){
-        CanSumProd += minterm(0, output);
+        CanSumProd += minterm(7, output);
         CanSumProd += " + ";
         index -= 127;
     };
     if(index > 63){
-        CanSumProd += minterm(1, output);
+        CanSumProd += minterm(6, output);
         CanSumProd += " + ";
         index -= 63;
     }
     if(index > 31){
-        CanSumProd += minterm(2, output);
+        CanSumProd += minterm(5, output);
         CanSumProd += " + ";
         index -= 31;
     }
     if(index > 15){
-        CanSumProd += minterm(3, output);
+        CanSumProd += minterm(4, output);
         CanSumProd += " + ";
         index -= 15;
     }
     if(index > 7){
-        CanSumProd += minterm(4, output);
+        CanSumProd += minterm(3, output);
         CanSumProd += " + ";
         index -= 7;
     }
     if(index > 3){
-        CanSumProd += minterm(5, output);
+        CanSumProd += minterm(2, output);
         CanSumProd += " + ";
         index -= 3;
     }
     if(index > 1){
-        CanSumProd += minterm(6, output);
+        CanSumProd += minterm(1, output);
         CanSumProd += " + ";
         index -= 1;
     }
     if(index > 0){
-        CanSumProd += minterm(7, output);
+        CanSumProd += minterm(0, output);
     }
 
     output << "\n" << CanSumProd;
@@ -255,7 +255,7 @@ string minterm(int index, ofstream &output){
         m += "z'";
         z = !z;
     } else { m += "z";}
-    output << "\nm" << index << " = " << m << endl;
+    output << "\nCSOP: f" << index << " = " << m << endl;
 
     AndTruthTable(output, x, y, z, index);
 
@@ -285,7 +285,7 @@ string maxterm(int index, ofstream &output){
         m += "z";
         z = !z;
     } else { m += "z'";};
-    output << "\nM" << index << " = " << m << endl;
+    output << "\nCSOP: f" << index << " = " << m << endl;
 
     OrTruthTable(output, x, y, z, index);
 
