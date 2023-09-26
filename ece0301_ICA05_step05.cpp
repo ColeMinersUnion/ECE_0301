@@ -27,19 +27,20 @@ int main(){
     ofstream output;
     output.open(addr);
 
-    output << "ECE 0301: Boolean Function of 3 Variables.\nRealization in Canonical Forms.\n" << endl;
 
     string myStr = minterm(num);
     string maxtm = maxterm(num);
 
     if (myStr == "ERROR! Invalid minterm index.\n"){ 
-        output << myStr << endl;
+        cout << myStr << endl;
         return 0;
     }
     if (maxtm == "ERROR! Invalid maxterm index.\n"){ 
-        output << maxtm << endl;
+        cout << maxtm << endl;
         return 0;
     }
+    output << "ECE 0301: Boolean Function of 3 Variables.\nRealization in Canonical Forms.\n" << endl;
+
     
     output << "m" << num << " = " << myStr << endl;
     output << "M" << num << " = " << maxtm << endl;
