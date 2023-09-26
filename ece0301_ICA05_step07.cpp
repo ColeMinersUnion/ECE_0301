@@ -31,17 +31,16 @@ int main(){
     ofstream output;
     output.open(addr);
 
-    output << "ECE 0301: Boolean Function of 3 Variables.\nRealization in Canonical Forms.\n" << endl;
 
     string myStr = minterm(num, output);
     string maxtm = maxterm(num, output);
 
     if (myStr == "ERROR! Invalid minterm index.\n"){ 
-        output << myStr << endl;
+        cout << myStr << endl;
         return 0;
     }    
     if (maxtm == "ERROR! Invalid maxterm index.\n"){ 
-        output << myStr << endl;
+        cout << myStr << endl;
         return 0;
     }
 
@@ -124,6 +123,10 @@ void AndTruthTable(ofstream &output, bool x1, bool y1, bool z1, int index){
 
 string minterm(int index, ofstream &output){
     bool x = true, y = true, z = true;
+
+    output << "ECE 0301: Boolean Function of 3 Variables.\nRealization in Canonical Forms.\n" << endl;
+
+    
     if(!BoundsCheck(index)){
         return "ERROR! Invalid minterm index.\n";
     } 
@@ -154,6 +157,9 @@ string minterm(int index, ofstream &output){
 
 string maxterm(int index, ofstream &output){
     bool x = false, y = false, z = false;
+
+    output << "ECE 0301: Boolean Function of 3 Variables.\nRealization in Canonical Forms.\n" << endl;
+
     if(!BoundsCheck(index)){
         return "ERROR! Invalid maxterm index.\n";
     } 
