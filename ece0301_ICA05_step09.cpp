@@ -9,10 +9,10 @@ bool BoundsCheck(int, int, int);
 void OrTruthTable(ofstream &, bool, bool, bool, int);
 void AndTruthTable(ofstream &, bool, bool, bool, int);
 string minterm(int);
-string minterm(int, ofstream &);
+string minterm(int, ofstream &, int);
 
 string maxterm(int);
-string maxterm(int, ofstream &);
+string maxterm(int, ofstream &, int);
 
 string CSOP(int, ofstream &);
 bool CSOP(int, ofstream &, bool, bool, bool);
@@ -118,42 +118,42 @@ string CSOP(int index, ofstream &output){
 
 
     if(index > 127){
-        CanSumProd += minterm(7, output);
+        CanSumProd += minterm(7, output, num);
         CanSumProd += " + ";
         index -= 127;
     };
     if(index > 63){
-        CanSumProd += minterm(6, output);
+        CanSumProd += minterm(6, output, num);
         CanSumProd += " + ";
         index -= 63;
     }
     if(index > 31){
-        CanSumProd += minterm(5, output);
+        CanSumProd += minterm(5, output, num);
         CanSumProd += " + ";
         index -= 31;
     }
     if(index > 15){
-        CanSumProd += minterm(4, output);
+        CanSumProd += minterm(4, output, num);
         CanSumProd += " + ";
         index -= 15;
     }
     if(index > 7){
-        CanSumProd += minterm(3, output);
+        CanSumProd += minterm(3, output, num);
         CanSumProd += " + ";
         index -= 7;
     }
     if(index > 3){
-        CanSumProd += minterm(2, output);
+        CanSumProd += minterm(2, output, num);
         CanSumProd += " + ";
         index -= 3;
     }
     if(index > 1){
-        CanSumProd += minterm(1, output);
+        CanSumProd += minterm(1, output, num);
         CanSumProd += " + ";
         index -= 1;
     }
     if(index > 0){
-        CanSumProd += minterm(0, output);
+        CanSumProd += minterm(0, output, num);
     }
 
     output << "\n" << CanSumProd;
@@ -234,7 +234,7 @@ void AndTruthTable(ofstream &output, bool x1, bool y1, bool z1, int index){
 
 }
 
-string minterm(int index, ofstream &output){
+string minterm(int index, ofstream &output, int num){
     bool x = true, y = true, z = true;
     if(!BoundsCheck(index)){
         return "ERROR! Invalid minterm index.\n";
@@ -255,7 +255,7 @@ string minterm(int index, ofstream &output){
         m += "z'";
         z = !z;
     } else { m += "z";}
-    output << "\nCSOP: f" << index << " = " << m << endl;
+    output << "\nCSOP: f" << num << " = " << m << endl;
 
     AndTruthTable(output, x, y, z, index);
 
@@ -264,7 +264,7 @@ string minterm(int index, ofstream &output){
     return m;
 }
 
-string maxterm(int index, ofstream &output){
+string maxterm(int index, ofstream &output, int num){
     bool x = false, y = false, z = false;
     if(!BoundsCheck(index)){
         return "ERROR! Invalid minterm index.\n";
@@ -285,7 +285,7 @@ string maxterm(int index, ofstream &output){
         m += "z";
         z = !z;
     } else { m += "z'";};
-    output << "\nCSOP: f" << index << " = " << m << endl;
+    output << "\nCSOP: f" << num << " = " << m << endl;
 
     OrTruthTable(output, x, y, z, index);
 
