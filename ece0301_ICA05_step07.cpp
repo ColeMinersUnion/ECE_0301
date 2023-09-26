@@ -56,10 +56,10 @@ bool BoundsCheck(int index, int upperbound = 7, int lowerbound = 0){
     } else {return false;}
 }
 
-bool Or(bool x, bool y, bool z, bool x1 = false, bool y1 = false, bool z1 = false){
-    if(x1){ x = !x; }
-    if(y1){ y = !y; }
-    if(z1){ z = !z; }
+bool Or(bool x, bool y, bool z, bool x1 = true, bool y1 = true, bool z1 = true){
+    if(!x1){ x = !x; }
+    if(!y1){ y = !y; }
+    if(!z1){ z = !z; }
     
     if(x || y || z){ // probably could have made this a ternery statement to keep the function to one line
         return true;
