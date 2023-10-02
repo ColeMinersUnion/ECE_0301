@@ -12,7 +12,7 @@ int print(ifstream &, ofstream &, double[DIM][DIM], double[DIM]);
 
 int main(){
     ofstream output;
-    string addr = "ECE0301_ICA06_Axeqb_Solution.txt"; //the path to my output file. w
+    string addr = "ECE0301_ICA06_Axeqb_Solution_dim2.txt"; //the path to my output file. w
     output.open(addr);
     addr = "ECE0301_ICA06_Axeqb_problem_dim2.txt";
 
