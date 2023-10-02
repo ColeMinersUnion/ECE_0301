@@ -12,9 +12,9 @@ int print(ifstream &, ofstream &, double[DIM][DIM], double[DIM]);
 
 int main(){
     ofstream output;
-    string addr = "ECE0301_ICA06_Axeqb_Solution_dim2.txt"; //the path to my output file. w
+    string addr = "ECE0301_ICA06_Axeqb_Solution.txt"; //the path to my output file. w
     output.open(addr);
-    addr = "ECE0301_ICA06_Axeqb_problem_dim2.txt";
+    addr = "ECE0301_ICA06_Axeqb_problem.txt";
 
     ifstream input;
     input.open(addr);
@@ -87,7 +87,7 @@ int print(ifstream &input, ofstream &output, double A[DIM][DIM], double B[DIM]){
             return -1;
         default:
             if(n != DIM){ //this is if the dimensions don't match
-                ouput << "ERROR! Dimension mismatch, N != DIM." << endl;
+                output << "ERROR! Dimension mismatch, N != DIM." << endl;
                 return -1;
             }
             output << "Input file: N = " << n << endl; //if it did
