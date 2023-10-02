@@ -163,6 +163,8 @@ int print(ifstream &input, ofstream &output, double A[DIM][DIM], double B[DIM]){
     }
 
     //outputting the contents of matrix B
+    output << "b = \n";
+
     for(int i = 0; i < DIM; i++){
         output << "[\t";
 
