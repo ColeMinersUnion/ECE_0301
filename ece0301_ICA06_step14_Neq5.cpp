@@ -172,6 +172,9 @@ int print(ifstream &input, ofstream &output, double A[DIM][DIM], double B[DIM]){
 
     }
 
+    output << "Problem: A * x = b" << endl;
+
+
     for(int i = 0; i < DIM; i++){
         output << "[\t";
         for(int j = 0; j < DIM; j++){
