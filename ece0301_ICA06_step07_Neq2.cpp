@@ -14,7 +14,7 @@ int main(){
     ofstream output;
     string addr = "ECE0301_ICA06_Axeqb_Solution.txt"; //the path to my output file. w
     output.open(addr);
-    addr = "ECE0301_ICA06_Axeqb_problem.txt";
+    addr = "ECE0301_ICA06_Axeqb_problem_dim2.txt";
 
     ifstream input;
     input.open(addr);
