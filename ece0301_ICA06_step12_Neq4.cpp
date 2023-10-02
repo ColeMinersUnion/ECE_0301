@@ -20,7 +20,7 @@ double determinant(ofstream &, double[DIM][DIM], int);
 
 int main(){
     ofstream output;
-    string addr = "ECE0301_ICA06_Axeqb_Solution.txt"; //the path to my output file. w
+    string addr = "ECE0301_ICA06_Axeqb_solution.txt"; //the path to my output file. w
     output.open(addr);
     addr = "ECE0301_ICA06_Axeqb_problem.txt";
 
@@ -30,19 +30,12 @@ int main(){
     double matrixA[DIM][DIM];
     double matrixB[DIM];
     
+    Mprint(output, matrixA, DIM);
 
-    if(print(input, output, matrixA, matrixB) == -1){return -1;} //making sure this still exits if shit goes wack.
+    int N = getN(input, matrixA, matrixB);
 
-    double matrixX[DIM];
-    double matrixC[DIM];
-    for(int i = 0; i < DIM; i++){
-        cout << "X" << i+1 << ". = ";
-        cin >> matrixX[i];
-    }
 
-    multiplication(output, matrixA, matrixX, matrixC);
-
-    cout << "Determinant of A: "<< determinant(output, matrixA, DIM) << endl;
+    output << "Det(A) = "<< determinant(output, matrixA, DIM) << endl;
     
     input.close();
     output.close();
@@ -154,7 +147,6 @@ void multiplication(ofstream &output, double A[DIM][DIM], double X[DIM], double 
 
 void Mprint(ofstream &output, double A[DIM][DIM], int N){
     //basic outputs with some flavor text for myself to know if I printed everything or not. 
-    output << endl;
     for(int i = 0; i < N; i++){
         output << "[\t";
         for(int j = 0; j < N; j++){
@@ -165,26 +157,6 @@ void Mprint(ofstream &output, double A[DIM][DIM], int N){
     }
 }
 
-/*
-void AlmostCopy(ofstream &output, double CtrlC[DIM][DIM], double CtrlV[DIM][DIM], int iSkip, int jSkip, int n){
-    int iC = 0, jC = 0;
-    for(int i = 0; i < n - 1; i++){
-        if(i == iSkip){iC++;} 
-
-        for(int j = 0; j < n -1; j++){
-            //I'm skipping through the
-            if(j == jSkip){jC++;} //Moves us past the given rows or columns if we get there
-               
-            CtrlV[i][j] = CtrlC[iC][jC]; //does the copying. I think I coulda had to different iterators defined in my for loop but this works just as well. 
-                                     //the destructor should delete the iC and jC after the function is off the call stack anyway.
-            
-            //these need to increment like normal
-            jC++;
-        }
-        iC++;
-    }
-}
-*/
 
 void AlmostCopy(ofstream &output, double CtrlC[DIM][DIM], double CtrlV[DIM][DIM], int iSkip, int jSkip, int n){
     bool beenSkippedX = false, beenSkippedY = false;
@@ -219,24 +191,16 @@ double determinant(ofstream &output, double MatrixA[DIM][DIM], int N=DIM){
     double det = 0;
     double subMatrix[DIM][DIM];
 
-    Mprint(output, MatrixA, N);
-
     if(N == 1){
         return MatrixA[0][0];
     }
 
     for(int j = 0; j < N; j++){
-        output << "\nCopied";
         AlmostCopy(output, MatrixA, subMatrix, 0, j, N);
-        Mprint(output, subMatrix, N);
 
-        det += pow(-1, j) * MatrixA[0][j] * determinant(output, subMatrix, N-1); //a^-1 * 
-        cout << "N: " << N << " -> " << pow(-1, j) << " * " <<  MatrixA[0][j] << " * " << determinant(output, subMatrix, N-1) << endl;
-
-        Mprint(output, subMatrix, N);
+        det += pow(-1, j) * MatrixA[0][j] * determinant(output, subMatrix, N-1); //a^-1 * Matrix[0][j] * determinant of the other rows
+                                                                                //hard-coded to work on the first row
     }
 
     return det;
 }
-
-
