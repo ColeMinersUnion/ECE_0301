@@ -107,11 +107,13 @@ int print(ifstream &input, ofstream &output, double A[DIM][DIM], double B[DIM]){
 
     //outputting the contents of matrix B
     output << "\nb = " << endl;
-    output << "[\t";
     for(int i = 0; i < DIM; i++){
+        output << "[\t";
+
         output << B[i] << "\t"; 
+        output << "]\n";
+
     }
-    output << "]\n";
 
 
     return 0;
