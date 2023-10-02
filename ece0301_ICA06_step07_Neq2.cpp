@@ -83,11 +83,11 @@ int print(ifstream &input, ofstream &output, double A[DIM][DIM], double B[DIM]){
 
     switch(n){
         case -1: //throw a file formatting error
-            cout << "ERROR! Input file format error." << endl;
+            output << "ERROR! Input file format error." << endl;
             return -1;
         default:
             if(n != DIM){ //this is if the dimensions don't match
-                cout << "ERROR! Dimension mismatch, N != DIM." << endl;
+                ouput << "ERROR! Dimension mismatch, N != DIM." << endl;
                 return -1;
             }
             output << "Input file: N = " << n << endl; //if it did
