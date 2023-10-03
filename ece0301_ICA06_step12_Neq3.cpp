@@ -30,9 +30,9 @@ int main(){
     double matrixA[DIM][DIM];
     double matrixB[DIM];
     
-    Mprint(output, matrixA, DIM);
 
     int N = getN(input, matrixA, matrixB);
+    Mprint(output, matrixA, DIM);
 
 
     output << "Det(A) = "<< determinant(output, matrixA, DIM) << endl;
