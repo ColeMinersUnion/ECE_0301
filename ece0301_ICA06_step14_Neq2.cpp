@@ -204,7 +204,6 @@ void multiplication(ofstream &output, double A[DIM][DIM], double X[DIM], double 
         for(int j = 0; j < DIM; j++){
             C[i] += A[i][j] * X[j]; //for any given C, find all the As and the matching X and add them into c
         }
-        output <<"[" << "\t" << C[i] << "]\n";
     }
 }
 

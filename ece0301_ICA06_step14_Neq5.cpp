@@ -182,12 +182,12 @@ int print(ifstream &input, ofstream &output, double A[DIM][DIM], double B[DIM]){
         }
         output << " ]";
 
-        if(i == ceil(DIM/2)-1){
-            output << " + ";
+        if(i == ceil(DIM/2)){
+            output << " * ";
         } else { output << "   ";}
         output << "[ x" << i << " ]";
 
-        if(i == ceil(DIM/2)-1){
+        if(i == ceil(DIM/2)){
             output << " = ";
         } else { output << "   ";}
         output << "[\t";
@@ -208,7 +208,6 @@ void multiplication(ofstream &output, double A[DIM][DIM], double X[DIM], double 
         for(int j = 0; j < DIM; j++){
             C[i] += A[i][j] * X[j]; //for any given C, find all the As and the matching X and add them into c
         }
-        output <<"[" << "\t" << C[i] << "]\n";
     }
 }
 
