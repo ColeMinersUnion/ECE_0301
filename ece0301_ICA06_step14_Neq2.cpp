@@ -62,12 +62,12 @@ int main(){
         }
         output << "]";
 
-        if(i == floor(DIM/2)){
+        if(i == ceil(DIM/2) - 1){
             output << " * ";
         } else { output << "   ";}
         output << "[\t" << det[i] << "\t]";
 
-        if(i == floor(DIM/2)){
+        if(i == ceil(DIM/2) - 1){
             output << " = ";
         } else { output << "   ";}
         output << "[\t";
@@ -190,8 +190,7 @@ int print(ifstream &input, ofstream &output, double A[DIM][DIM], double B[DIM]){
             output << " = ";
         } else { output << "   ";}
         output << "[\t";
-        output << B[i] << "\t"; 
-        output << "]\n" << endl;
+        output << B[i] << "]\n" << endl;
 
     }
 

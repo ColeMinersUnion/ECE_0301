@@ -62,12 +62,12 @@ int main(){
         }
         output << "]";
 
-        if(i == floor(DIM/2)){
+        if(i == ceil(DIM/2) - 1){
             output << " * ";
         } else { output << "   ";}
         output << "[\t" << det[i] << "\t]";
 
-        if(i == floor(DIM/2)){
+        if(i == ceil(DIM/2) - 1){
             output << " = ";
         } else { output << "   ";}
         output << "[\t";
