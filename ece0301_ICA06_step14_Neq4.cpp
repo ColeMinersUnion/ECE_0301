@@ -78,7 +78,7 @@ int main(){
 
     output << "\nError in RHS values:\n";
     for(int i = 0; i < DIM; i++){
-        output << "[\t" << matrixB[i] - det[i] << "\t]\n";
+        output << "[\t" << matrixB[i] - matrixBB[i] << "\t]\n";
     }
     
     input.close();
