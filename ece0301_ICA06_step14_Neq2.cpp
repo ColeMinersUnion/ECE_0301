@@ -189,7 +189,7 @@ int print(ifstream &input, ofstream &output, double A[DIM][DIM], double B[DIM]){
         if(i == ceil(DIM/2)-1){
             output << " = ";
         } else { output << "   ";}
-        output << "[\t\t";
+        output << "[\t";
         output << B[i] << "]\n" << endl;
 
     }
