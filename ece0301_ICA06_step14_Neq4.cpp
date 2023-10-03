@@ -76,6 +76,10 @@ int main(){
 
     }
 
+    output << "\nError in RHS values:\n";
+    for(int i = 0; i < DIM; i++){
+        output << "[\t" << matrixB[i] - det[i] << "\t]\n";
+    }
     
     input.close();
     output.close();
@@ -194,7 +198,7 @@ int print(ifstream &input, ofstream &output, double A[DIM][DIM], double B[DIM]){
 
     }
 
-
+    
 
 
     return 0;

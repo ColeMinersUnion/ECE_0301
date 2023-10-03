@@ -62,18 +62,23 @@ int main(){
         }
         output << "]";
 
-        if(i == ceil(DIM/2) - 1){
+        if(i == ceil(DIM/2)){
             output << " * ";
         } else { output << "   ";}
         output << "[\t" << det[i] << "\t]";
 
-        if(i == ceil(DIM/2) - 1){
+        if(i == ceil(DIM/2)){
             output << " = ";
         } else { output << "   ";}
         output << "[\t";
         output << matrixBB[i] << "\t"; 
         output << "\t]\n" << endl;
 
+    }
+
+    output << "\nError in RHS values:\n";
+    for(int i = 0; i < DIM; i++){
+        output << "[\t" << matrixB[i] - det[i] << "\t]\n";
     }
 
     
