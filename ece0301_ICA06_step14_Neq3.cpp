@@ -193,7 +193,7 @@ int print(ifstream &input, ofstream &output, double A[DIM][DIM], double B[DIM]){
         } else { output << "   ";}
         output << "[\t";
         output << B[i] << "\t"; 
-        output << "]\n" << endl;
+        output << " ]\n" << endl;
 
     }
 
