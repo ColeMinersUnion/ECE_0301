@@ -176,11 +176,11 @@ int print(ifstream &input, ofstream &output, double A[DIM][DIM], double B[DIM]){
 
 
     for(int i = 0; i < DIM; i++){
-        output << "[\t";
+        output << "[";
         for(int j = 0; j < DIM; j++){
-            output << A[i][j] << "\t";
+            output << "\t" << A[i][j];
         }
-        output << "]";
+        output << " ]";
 
         if(i == ceil(DIM/2)-1){
             output << " + ";
