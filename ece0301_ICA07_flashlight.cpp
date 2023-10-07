@@ -1,5 +1,5 @@
 #include <iostream>
-#include "FlashLight.cpp"
+#include "FlashLight.h"
 
 using namespace std;
 
