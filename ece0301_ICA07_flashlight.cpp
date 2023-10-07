@@ -1,5 +1,6 @@
 #include <iostream>
 #include "FlashLight.h"
+#include "FlashLight.cpp"
 
 using namespace std;
 
@@ -42,6 +43,7 @@ int main(){
 }
 
 void menu(){
+    cout << "What would you like to do with the flashlight?" << endl;
     cout << "(1) Change the battery voltage" << endl;
     cout << "(2) Change the bulb resistance" << endl;
     cout << "(3) Toggle the switch state" << endl;
