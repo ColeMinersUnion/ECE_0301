@@ -46,5 +46,5 @@ void menu(){
     cout << "(1) Change the battery voltage" << endl;
     cout << "(2) Change the bulb resistance" << endl;
     cout << "(3) Toggle the switch state" << endl;
-    cout << "(4) Exit the program" << endl;
+    cout << "(4) Exit program" << endl;
 }
