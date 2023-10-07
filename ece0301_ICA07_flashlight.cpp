@@ -16,14 +16,14 @@ int main(){
         switch(choice){
             case 1:
                 double v;
-                cout << "Enter the new battery voltage: ";
+                cout << "Enter the new battery voltage:";
                 cin >> v;
                 light.setV(v);
                 light.stdOut();
                 break;
             case 2:
                 double resistance;
-                cout << "Enter the new bulb resistance: ";
+                cout << "Enter the new bulb resistance:";
                 cin >> resistance;
                 light.setR(resistance);
                 light.stdOut();
