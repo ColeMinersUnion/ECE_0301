@@ -55,7 +55,7 @@ int main(){
 
     MyComplex num;
 
-    cout << "This program will calculate the magnitude and phase\nangle of a complex.\n" << endl;
+    cout << "This program will calculate the magnitude and phase\nangle of a complex number.\n" << endl;
     cout << "What is the real part? ";
 
     double temp;
