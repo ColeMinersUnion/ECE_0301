@@ -45,8 +45,11 @@ void FlashLight::stdOut(){
     std::cout << "The bulb resistance is " << resistance << " Ohms." << std::endl;
     if(switchState){
         std::cout << "The switch is closed." << std::endl;
+        std::cout << "The flashlight is on." << std::endl;
+
     } else {
         std::cout << "The switch is open." << std::endl;
+        std::cout << "The flashlight is off." << std::endl;
     }
     std::cout << "The bulb current is " << getI() << " Amperes." << std::endl;
     std::cout << "The bulb current is " << getW() << " Watts." << std::endl;
