@@ -1,6 +1,6 @@
 #include <iostream>
 #include "FlashLight.h"
-#include "./FlashLight.cpp"
+#include "FlashLight.cpp"
 
 using namespace std;
 
