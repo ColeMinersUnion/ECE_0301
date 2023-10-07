@@ -7,6 +7,7 @@ void menu();
 
 int main(){
     FlashLight light;
+    light.stdOut();
     int choice;
     while(true){
         menu();
