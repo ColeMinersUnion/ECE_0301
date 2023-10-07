@@ -11,7 +11,7 @@ int main(){
     int choice;
     while(true){
         menu();
-        cout << "Your selection?";
+        cout << "Your selection?" << endl;
         cin >> choice;
         switch(choice){
             case 1:

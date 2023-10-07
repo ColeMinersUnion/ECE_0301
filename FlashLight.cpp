@@ -40,7 +40,7 @@ void FlashLight::swapState(){ switchState = !switchState; }
 
 void FlashLight::stdOut(){
     //output function
-    std::cout << "Here are the data on the FlashLight:" << std::endl;
+    std::cout << "\nHere are the data on the FlashLight:" << std::endl;
     std::cout << "The battery voltage is " << voltage << " Volts." << std::endl;
     std::cout << "The bulb resistance is " << resistance << " Ohms." << std::endl;
     if(switchState){
