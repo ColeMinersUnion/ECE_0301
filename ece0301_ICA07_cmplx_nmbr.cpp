@@ -62,11 +62,11 @@ int main(){
     cin >> temp;
     num.setReal(temp);
 
-    cout << "\nWhat is the imaginary part? ";
+    cout << "What is the imaginary part? ";
     cin >> temp;
     num.setImaginary(temp);
 
-    cout << "\nHere are the data on complex number z:" << endl;
+    cout << "Here are the data on complex number z:" << endl;
     cout << "Real part: " << num.getReal() << endl;
     cout << "Imaginary part: " << num.getImaginary() << endl;
     cout << "Magnitude: " << num.magnitude() << endl;
