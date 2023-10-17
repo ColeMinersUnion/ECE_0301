@@ -1,0 +1,124 @@
+ECE 0301: Boolean Function of 3 Variables.
+Realization in Canonical Forms.
+
+
+m0 = x'y'z'
+
+Truth table for minterm 0.
+
+X	Y	Z	f(z, y, z)
+--------------------------------
+0	0	0	1
+0	0	1	0
+0	1	0	0
+0	1	1	0
+1	0	0	0
+1	0	1	0
+1	1	0	0
+1	1	1	0
+
+m1 = x'y'z
+
+Truth table for minterm 1.
+
+X	Y	Z	f(z, y, z)
+--------------------------------
+0	0	0	0
+0	0	1	1
+0	1	0	0
+0	1	1	0
+1	0	0	0
+1	0	1	0
+1	1	0	0
+1	1	1	0
+
+m2 = x'yz'
+
+Truth table for minterm 2.
+
+X	Y	Z	f(z, y, z)
+--------------------------------
+0	0	0	0
+0	0	1	0
+0	1	0	1
+0	1	1	0
+1	0	0	0
+1	0	1	0
+1	1	0	0
+1	1	1	0
+
+m3 = x'yz
+
+Truth table for minterm 3.
+
+X	Y	Z	f(z, y, z)
+--------------------------------
+0	0	0	0
+0	0	1	0
+0	1	0	0
+0	1	1	1
+1	0	0	0
+1	0	1	0
+1	1	0	0
+1	1	1	0
+
+m4 = xy'z'
+
+Truth table for minterm 4.
+
+X	Y	Z	f(z, y, z)
+--------------------------------
+0	0	0	0
+0	0	1	0
+0	1	0	0
+0	1	1	0
+1	0	0	1
+1	0	1	0
+1	1	0	0
+1	1	1	0
+
+m5 = xy'z
+
+Truth table for minterm 5.
+
+X	Y	Z	f(z, y, z)
+--------------------------------
+0	0	0	0
+0	0	1	0
+0	1	0	0
+0	1	1	0
+1	0	0	0
+1	0	1	1
+1	1	0	0
+1	1	1	0
+
+m6 = xyz'
+
+Truth table for minterm 6.
+
+X	Y	Z	f(z, y, z)
+--------------------------------
+0	0	0	0
+0	0	1	0
+0	1	0	0
+0	1	1	0
+1	0	0	0
+1	0	1	0
+1	1	0	1
+1	1	1	0
+
+m7 = xyz
+
+Truth table for minterm 7.
+
+X	Y	Z	f(z, y, z)
+--------------------------------
+0	0	0	0
+0	0	1	0
+0	1	0	0
+0	1	1	0
+1	0	0	0
+1	0	1	0
+1	1	0	0
+1	1	1	1
+x'y'z' + x'y'z + x'yz' + x'yz + xy'z' + xy'z + xyz' + xyz
