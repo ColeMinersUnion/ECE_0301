@@ -1,0 +1,4 @@
+ECE 0301 - Matrix-Vector Computations,
+Determinants and Cramer's Rule
+
+Global array dimension: DIM = 3
