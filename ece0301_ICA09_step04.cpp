@@ -61,7 +61,7 @@ int main(){
 
     cout << endl;
 
-    array.merge(copied, array.ptr(), 2, 6, 10);
+    array.merge(copied, array.ptr(), 2, 6, 11);
     array.header(output, true);
 
     output.close();
