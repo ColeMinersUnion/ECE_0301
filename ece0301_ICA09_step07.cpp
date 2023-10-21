@@ -95,12 +95,6 @@ Sortable read(ifstream &infile){
     return array;
 }
 
-
-#include "Sortable.h"
-#include <fstream>
-#include <iostream>
-
-
 Sortable::Sortable(){ //constructor function
     size = 10;
     arr = new double[size];
