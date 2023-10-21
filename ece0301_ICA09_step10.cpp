@@ -1,5 +1,4 @@
 #include "Sortable.h"
-#include "Sortable.cpp"
 #include <iostream>
 #include <fstream>
 #include <string>
