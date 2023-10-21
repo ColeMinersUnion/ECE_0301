@@ -1,0 +1,25 @@
+ECE 0301 - Sorting Arrays
+Unsorted Array: 
+1
+2
+6
+6
+8
+-11
+-10
+-10
+-8
+-5
+-3
+Sorted Array: 
+-11
+-10
+-10
+-8
+-5
+-3
+1
+2
+6
+6
+8
