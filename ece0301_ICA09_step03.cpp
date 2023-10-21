@@ -57,12 +57,6 @@ int main(){
         copied[i] = ptr[i];
     }
 
-    for(int i = 0; i < array.getSize(); i++){
-        cout << copied[i] << "\t";
-    }
-
-    cout << endl;
-
     array.merge(copied, array.ptr(), 5);
     array.header(output, true);
 
