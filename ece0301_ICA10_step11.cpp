@@ -4,7 +4,6 @@
 #include <cmath>
 //#include <mgl2/mgl.h>
 #include "Signal.h"
-#include "Signal.cpp"
 
 unsigned int read(double* Sampfreq, double* time, double* amp, double* freq, double* phase);
 
