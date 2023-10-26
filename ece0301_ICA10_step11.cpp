@@ -2,7 +2,7 @@
 #include <string>
 #include <fstream>
 #include <cmath>
-#include <mgl2/mgl.h>
+//#include <mgl2/mgl.h>
 #include "Signal.h"
 #include "Signal.cpp"
 
