@@ -1,7 +1,9 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include <cmath>
 #include <mgl2/mgl.h>
+#include <math.h>
 
 class Signal{
     private:
@@ -36,6 +38,18 @@ class Signal{
                 sample.push_back(0);
             }
         }
+        
+        void sinWave(double Amplitude, double freq, double phi){
+			for(int i = 0; i < size; i++){
+				sample[i] = Amplitude * std::cos(2 * M_PI * freq * time[i] + phi);
+			}
+		}
+		
+		void roundWave(){
+			for(int i = 0; i < size; i++){
+				sample[i] = std::round(sample[i]);
+			}
+		}
 		
         //mutator and accessor functions
         void setSize(int samples){
@@ -163,22 +177,36 @@ class Signal{
 			sample = obj.sample;
 			return *this;
 		}
+		
+		Signal operator+(Signal &obj){
+			Signal newSig = obj;
+			for(int i = 0; i < size; i++){
+				newSig.getTimeV()[i] = obj.getTimeV()[i] + getTimeV()[i];
+			}
+			return newSig;
+		}
+		
 };
 
 
 int main(){
-    Signal X;
-    X.constant(1);
+    Signal X(401, 10000, -0.01, "X");
+    X.sinWave(100, 200, -M_PI/2);
     X.output();
     X.plot();
+    
+    Signal Y(401, 10000, -0.01, "Y");
+    Y.constant(250);
+    Y.output();
+    Y.plot();
+    
+    Signal Z = X + Y;
+    Z.setLbl("Z");
+    //Z.roundWave();
+    Z.output();
+    Z.plot();
 
-    Signal Y = X;
-    Y.setSize(401);
-    Y.setFreq(10000);
-    Y.setTime(-0.01);
-    Y.setLbl("y");
-    Y.fillTime();
-    Y.constant(0);
+    
     
 
     Y.output();
