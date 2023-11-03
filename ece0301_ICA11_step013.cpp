@@ -181,7 +181,7 @@ class Signal{
 		Signal operator+(Signal &obj){
 			Signal newSig = obj;
 			for(int i = 0; i < size; i++){
-				newSig.getTimeV()[i] = obj.getTimeV()[i] + getTimeV()[i];
+				newSig.getSampV()[i] = obj.getSampV()[i] + getSampV()[i];
 			}
 			return newSig;
 		}
