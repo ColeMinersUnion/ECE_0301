@@ -43,6 +43,7 @@ void CurrentDivider::setCurrent(double v){ src.setCurr(v);
     CurrentDivider::calculate();}
 
 void CurrentDivider::output(std::ofstream* file){
+    CurrentDivider::calculate();
     *file << "\n";
     for(int i = 0; i < 48; i++){
         *file << "-";
