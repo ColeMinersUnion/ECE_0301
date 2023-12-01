@@ -1,13 +1,8 @@
 #include "Network.h"
-#include "Network.cpp"
 #include "Node.h"
-#include "Node.cpp"
 #include "Component.h"
-#include "Component.cpp"
 #include "DCVoltageSource.h"
-#include "DCVoltageSource.cpp"
 #include "Resistor.h"
-#include "Resistor.cpp"
 #include <iostream>
 #include <fstream>
 
