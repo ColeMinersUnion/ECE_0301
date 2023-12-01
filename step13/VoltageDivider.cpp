@@ -48,7 +48,7 @@ void VoltageDivider::output(std::ofstream* file){
     }
 
     *file << "\n\nData for Electrical Network # " << getIndex() << ":\n";
-    *file << "Network # " << getIndex() << " is a Voltage Divider Network.\n";
+    *file << "Network # " << getIndex() << " is a Voltage Divider.\n";
     *file << "At present, there are " << getNum() << " Networks in existance.\n";
     *file << "At present, there are " << getList()[0].getNum() << " nodes in existance.\n";
     *file << "Network # " << getIndex() << " has " << getNodes() << " nodes.\n";
