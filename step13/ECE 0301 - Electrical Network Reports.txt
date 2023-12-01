@@ -1,0 +1,38 @@
+ECE 0301 - Electrical Network Simulation
+
+
+------------------------------------------------
+
+Data for Electrical Network # 0:
+Network # 0 is a Voltage Divider Network.
+At present, there are 1 Networks in existance.
+At present, there are 3 nodes in existance.
+Network # 0 has 3 nodes.
+Voltage at node 0 = 0
+Voltage at node 1 = 12
+Voltage at node 2 = 4
+At present, there are 3 components in existance.
+
+Component # 0 is a DC Voltage Source, Vs = 12 Volts.
+Component # 0 is connected between node 0 and node 1.
+The Voltage across Component # 0 = 12 Volts,
+with the negative terminal at node 0.
+The current in this DC Voltage Source = 0.04 Amps,
+flowing from Node 0 to Node 1.
+The power supplied by this DC Voltage Source = 0.48 Watts.
+
+Component # 1 is a Resistor, R = 200 Ohms.
+Component # 1 is connected between node 1 and node 2.
+The Voltage across Component # 1 = 8 Volts,
+with the negative terminal at node 2.
+The current in this Resistor = 0.04 Amps,
+flowing from Node 2 to Node 1.
+The power dissapated in this Resistor = 0.32 Watts.
+
+Component # 2 is a Resistor, R = 100 Ohms.
+Component # 2 is connected between node 2 and node 0.
+The Voltage across Component # 2 = 4 Volts,
+with the negative terminal at node 0.
+The current in this Resistor = 0.04 Amps,
+flowing from Node 0 to Node 2.
+The power dissapated in this Resistor = 0.16 Watts.

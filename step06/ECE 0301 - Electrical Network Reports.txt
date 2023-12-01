@@ -1,0 +1,20 @@
+ECE 0301 - Electrical Network Simulation
+
+------------------------------------------------
+
+Data for Electrical Network # 0:
+At present, there are 1 Networks in existance.
+At present, there are 3 nodes in existance.
+Network # 0 has 3 nodes.
+Voltage at node 0 = 0
+Voltage at node 1 = -5
+Voltage at node 2 = 1.25
+Component # 0 is connected between node 0 and node 1.
+The Voltage across Component # 0 = 5 Volts,
+with the negative terminal at node 1.
+Component # 1 is connected between node 1 and node 2.
+The Voltage across Component # 1 = 6.25 Volts,
+with the negative terminal at node 1.
+Component # 2 is connected between node 2 and node 0.
+The Voltage across Component # 2 = 1.25 Volts,
+with the negative terminal at node 0.
