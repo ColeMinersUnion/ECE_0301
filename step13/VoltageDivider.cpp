@@ -42,7 +42,7 @@ void VoltageDivider::setVoltage(double v){ src.setVDD(v);
     VoltageDivider::calculate();}
 
 void VoltageDivider::output(std::ofstream* file){
-    VolgageDivider::calculate();
+    VoltageDivider::calculate();
     *file << "\n";
     for(int i = 0; i < 48; i++){
         *file << "-";
