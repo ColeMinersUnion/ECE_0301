@@ -1,9 +1,6 @@
 #include "Node.h"
-#include "Node.cpp"
 #include "Network.h"
-#include "Network.cpp"
 #include "Component.h"
-#include "Component.cpp"
 #include <iostream>
 #include <fstream>
 
